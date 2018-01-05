@@ -1,14 +1,8 @@
 
-# coding: utf-8
-
-# In[2]:
-
+#Usage of the function - png_to_jpg(path-to-input_dir,path-to-output_dir)
 
 import os
 from PIL import Image
-
-
-# In[42]:
 
 
 def png_to_jpg(input_dir,output_dir):
@@ -21,7 +15,7 @@ def png_to_jpg(input_dir,output_dir):
     
     for d in directories:
         dir_names.append(d)
-        print(d)
+        #print(d)
     
     for dir_name in dir_names:
         output_path = os.path.join(output_dir, dir_name)
@@ -45,18 +39,5 @@ def png_to_jpg(input_dir,output_dir):
             rgb_im = im.convert('RGB')
             rgb_im.save(os.path.join(path,base_name+".jpg"))
             
-    
-    
 
-
-# In[43]:
-
-
-#png_to_jpg("/Users/hardikthaker/Downloads/train_seedling","/Users/hardikthaker/Desktop/train_seedling")
-
-
-# In[21]:
-
-
-#os.path.basename("/Users/hardikthaker/Downloads/train_seedling/base.png")
 
